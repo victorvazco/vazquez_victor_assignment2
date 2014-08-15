@@ -9,9 +9,11 @@
 
 //Global Variables
 var name = "Lee";
-var number = 5;
+var number = 15;
 var truth = true;
-var decideMath = true;
+var msg1 = "Never give up! ";
+var msg2 = "You're awesome!";
+
 
 
 
@@ -41,7 +43,7 @@ var decideU = function(confirmAnswer){
         while (cost>0) {
             console.log("You purchased New level " + cost + ".");
             cost --;
-            returned = 'Levels uploaded';
+            returned = 'Levels uploaded, ';
         }
         return returned;
     
@@ -60,7 +62,7 @@ var decideU = function(confirmAnswer){
 
 var uploadTimer = function(waiting){
     
-    if (decideMath === true) {
+    if (truth === true) {
     
 for (counter = 0; counter < 15; counter++) { // Math being done = addition (++)
    
@@ -84,6 +86,12 @@ for (counter = 0; counter < 15; counter++) { // Math being done = addition (++)
 
 //String Function
 
+var specialMessage = function(messg1,messg2){
+    
+    var fullMsg = messg1 + " / Share for your free points! / " + messg2;
+    
+    return fullMsg;
+};
 
 
 
@@ -96,11 +104,14 @@ var callGreet = greetU(ask);//Procedure
 var decideAsk = confirm("Do you want to pay extra?");
 
 var callDecide = decideU(decideAsk);
-
 console.log(callDecide + ask);
 
-var callTimer = uploadTimer(15);
-
+var callTimer = uploadTimer(number);
 console.log("Thank you for waiting " + callTimer + " seconds.");
+
+var blabber = specialMessage(msg1,msg2);
+console.log("We just want to say: " + blabber );
+
+
 
 
