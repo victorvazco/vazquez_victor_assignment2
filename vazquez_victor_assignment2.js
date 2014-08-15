@@ -11,6 +11,7 @@
 var name = "Lee";
 var number = 5;
 var truth = true;
+var decideMath = true;
 
 
 
@@ -57,7 +58,29 @@ var decideU = function(confirmAnswer){
 
 //Number Function
 
+var uploadTimer = function(waiting){
+    
+    if (decideMath === true) {
+    
+for (counter = 0; counter < 15; counter++) { // Math being done = addition (++)
+   
+    console.log("Please wait for  " + counter + " second(s).");
+   
+    var waitTime = 14;
+   
+   
+    }
+    return waitTime;
 
+    } else {
+    
+    var waitTime = 10;  
+        
+    }
+    
+    return waitTime;
+    
+};
 
 //String Function
 
@@ -76,5 +99,8 @@ var callDecide = decideU(decideAsk);
 
 console.log(callDecide + ask);
 
+var callTimer = uploadTimer(15);
+
+console.log("Thank you for waiting " + callTimer + " seconds.");
 
 
